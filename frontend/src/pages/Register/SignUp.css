@@ -1,0 +1,23 @@
+/** @format */
+
+.form-class {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 6rem; */
+  /* color: #37517e; */
+  background: linear-gradient(rgba(255, 255, 255, 0), transparent),
+    url('../../assests/img/signupbg.png');
+  /* background-size: cover; */
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 90vh;
+  /* backdrop-filter: blur(4px); */
+  /* min-width: 100vw; */
+}
+
+.form-class h2 {
+  color: #a0641f;
+  font-weight: bold;
+}

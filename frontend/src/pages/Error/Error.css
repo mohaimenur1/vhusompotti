@@ -1,0 +1,15 @@
+/** @format */
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-primary {
+  background-color: #37517e;
+}
+.btn-primary:hover {
+  background-color: #38588f;
+}

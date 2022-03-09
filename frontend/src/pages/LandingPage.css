@@ -1,0 +1,32 @@
+/** @format */
+
+.details-section {
+  display: flex;
+}
+
+.text-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-section h2 {
+  color: #37517e;
+}
+.text-section h2,
+p {
+  margin-bottom: 2rem;
+}
+
+.text-section .btn {
+  width: 40%;
+}
+
+nav img {
+  /* padding: 1.5rem; */
+  margin-top: 1.5rem;
+}
+
+.registerbtn {
+  border-radius: 5.125rem;
+}

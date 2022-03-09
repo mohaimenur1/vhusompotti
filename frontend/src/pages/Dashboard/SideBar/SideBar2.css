@@ -1,0 +1,38 @@
+/** @format */
+
+/* .side-menu {
+  position: fixed;
+} */
+
+.side-menu {
+  position: fixed;
+  background: white;
+  width: 20vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-menu .brand-name {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-menu li {
+  font-size: 24px;
+  padding: 2rem;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.side-menu li i {
+  padding-right: 0.5rem;
+}
+
+.side-menu li:hover {
+  background: white;
+  color: #f05462;
+}
