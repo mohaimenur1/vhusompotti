@@ -1,6 +1,7 @@
 /** @format */
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './SideBar2.css';
 // import './SideBar.css';
 const SideBar = () => {
@@ -98,7 +99,7 @@ const SideBar = () => {
               <span>
                 <i className='far fa-address-card'></i>
               </span>
-              Selling Post
+              <Link to='/post'>Selling Post</Link>
             </a>
           </li>
         </ul>

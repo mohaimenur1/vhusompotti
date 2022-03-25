@@ -7,6 +7,7 @@ import LandingPage from './pages/LandingPage';
 import LogIn from './pages/SignIn/LogIn';
 import SignUp from './pages/Register/SignUp';
 import Dashboard from './pages/Dashboard/Dashboard';
+import PostSelling from './pages/Post/PostSelling';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path='/login' element={<LogIn />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/post' element={<PostSelling />} />
         <Route path='*' element={<Error />} />
       </Routes>
     </BrowserRouter>

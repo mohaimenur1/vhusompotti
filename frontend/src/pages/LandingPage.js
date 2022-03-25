@@ -5,8 +5,16 @@ import logo from '../assests/img/logo.png';
 import './LandingPage.css';
 import { Link } from 'react-router-dom';
 import './LandingPage.css';
+import axios from 'axios';
 
 const landingpage = () => {
+  const ldp = async () => {
+    try {
+      const result = await axios.get('/').data;
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div className='container'>
       <nav>

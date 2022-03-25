@@ -1,9 +1,11 @@
 /** @format */
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './LogIn.css';
 
 const LogIn = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   return (
     <div>
       <div className='container'>
@@ -37,6 +39,8 @@ const LogIn = () => {
                       type='text'
                       className='form-control'
                       placeholder='Email'
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
 
@@ -46,6 +50,8 @@ const LogIn = () => {
                         type='password'
                         className='form-control'
                         placeholder='Password'
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
                       />
                     </div>
                   </div>
@@ -57,7 +63,8 @@ const LogIn = () => {
                 </div>
                 <div className='d-flex justify-content-center mt-5'>
                   <h5>
-                    Don't have an account?<Link to='/signup'>Sign Up</Link>
+                    Don't have an account?
+                    <Link to='/signup'>Sign Up</Link>
                   </h5>
                 </div>
               </form>
