@@ -1,0 +1,13 @@
+/** @format */
+
+/* .main-content {
+  display: flex;
+} */
+
+.dashboard-navbar {
+  min-height: 10vh !important;
+}
+
+.main-content-layout {
+  min-height: 90vh !important;
+}
