@@ -23,7 +23,7 @@
 
 .sidebar .nav-link {
   font-weight: 500;
-  color: #333;
+  color: #38588f;
 }
 
 .sidebar .nav-link i {
@@ -32,7 +32,7 @@
 }
 
 .sidebar .nav-link.active {
-  color: #007bff;
+  color: #38588f;
 }
 
 .sidebar .nav-link:hover i,
@@ -43,4 +43,8 @@
 .sidebar-heading {
   font-size: 0.75rem;
   text-transform: uppercase;
+}
+
+a {
+  color: #38588f !important;
 }
