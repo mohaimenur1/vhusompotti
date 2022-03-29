@@ -1,10 +1,40 @@
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
 
 import Navbar from "../Dashboard/Navbar/Navbar";
 import SideBar from "../Dashboard/SideBar/SideBar";
 import "./Fileupload.css";
 
 const Fileupload = () => {
+  const [ownerName, setOwnerName] = useState("");
+  const [bivag, setBivag] = useState("");
+  const [zilla, setZilla] = useState("");
+  const [mouza, setMouza] = useState("");
+  const [amount, setAmount] = useState("");
+  const [map, setMap] = useState("");
+
+  const fileFormSubmit = (e) => {
+    e.preventDefault();
+    console.log({ ownerName, bivag, zilla, mouza, amount, map });
+  };
+
+  const fileuploads = async () => {
+    const files = {
+      ownerName,
+      bivag,
+      zilla,
+      mouza,
+      amount,
+      map,
+    };
+    try {
+      const fileuploadResult = await axios.post("/api/users/fileupload", files)
+        .data;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div>
       {/* addin sidebar */}
@@ -14,6 +44,7 @@ const Fileupload = () => {
       <div className="fileupload-form">
         <h2 className="form-text">File Upload</h2>
         <form
+          onSubmit={fileFormSubmit}
           className="form-main"
           //   style={{ position: "absolute", left: "50%", top: "25%" }}
         >
@@ -23,6 +54,10 @@ const Fileupload = () => {
                 type="text"
                 className="form-control fileupload-input"
                 placeholder="Owner Name"
+                value={ownerName}
+                onChange={(e) => {
+                  setOwnerName(e.target.value);
+                }}
               />
             </div>
             <div className="col">
@@ -30,6 +65,10 @@ const Fileupload = () => {
                 type="text"
                 className="form-control fileupload-input"
                 placeholder="Bivag"
+                value={bivag}
+                onChange={(e) => {
+                  setBivag(e.target.value);
+                }}
               />
             </div>
           </div>
@@ -39,6 +78,10 @@ const Fileupload = () => {
                 type="text"
                 className="form-control fileupload-input"
                 placeholder="Zilla"
+                value={zilla}
+                onChange={(e) => {
+                  setZilla(e.target.value);
+                }}
               />
             </div>
             <div className="col">
@@ -46,6 +89,10 @@ const Fileupload = () => {
                 type="text"
                 className="form-control fileupload-input"
                 placeholder="Mouza"
+                value={mouza}
+                onChange={(e) => {
+                  setMouza(e.target.value);
+                }}
               />
             </div>
           </div>
@@ -55,6 +102,10 @@ const Fileupload = () => {
                 type="text"
                 className="form-control fileupload-input"
                 placeholder="Amount"
+                value={amount}
+                onChange={(e) => {
+                  setAmount(e.target.value);
+                }}
               />
             </div>
             <div className="col">
@@ -62,10 +113,18 @@ const Fileupload = () => {
                 type="text"
                 className="form-control fileupload-input"
                 placeholder="Map"
+                value={map}
+                onChange={(e) => {
+                  setMap(e.target.value);
+                }}
               />
             </div>
           </div>
-          <button type="submit" className="btn btn-primary fileupload-button">
+          <button
+            onClick={fileuploads}
+            type="submit"
+            className="btn btn-primary fileupload-button"
+          >
             Submit
           </button>
         </form>
