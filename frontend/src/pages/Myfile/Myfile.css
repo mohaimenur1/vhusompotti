@@ -1,0 +1,14 @@
+.myfile-table {
+  position: absolute;
+  left: 39%;
+  top: 25%;
+}
+
+.myfile-buutton {
+  display: flex;
+  justify-content: space-between;
+}
+
+th {
+  text-align: center !important;
+}

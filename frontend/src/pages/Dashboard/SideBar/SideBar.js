@@ -75,7 +75,7 @@ const SideBar = () => {
               <span>
                 <i className="fas fa-user-shield"></i>
               </span>
-              My Files
+              <Link to="/myfile">My Files</Link>
             </a>
           </li>
           <li className="nav-item">

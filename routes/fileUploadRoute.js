@@ -35,4 +35,13 @@ router.post("/fileupload", upload.single("propimage"), async (req, res) => {
   }
 });
 
+router.get("/getallfile", async (req, res) => {
+  try {
+    const fileResult = await fileUploadModel.find({});
+    return res.send(fileResult);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
 module.exports = router;
