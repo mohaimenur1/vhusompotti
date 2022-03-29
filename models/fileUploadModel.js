@@ -27,6 +27,9 @@ const fileUploadSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  propimage: {
+    type: String,
+  },
 });
 
 const fileUploadModel = mongoose.model("fileuploads", fileUploadSchema);

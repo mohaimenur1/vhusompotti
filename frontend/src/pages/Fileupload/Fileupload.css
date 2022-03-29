@@ -30,3 +30,10 @@
 .fileupload-input {
   width: 29rem;
 }
+
+.file-choose {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
