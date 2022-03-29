@@ -1,0 +1,32 @@
+.fileupload-form {
+  position: absolute;
+  left: 31%;
+  top: 10%;
+}
+
+.form-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-text {
+  font-size: 3rem;
+  text-align: center;
+  padding-bottom: 2rem;
+  color: #38588f;
+}
+
+.fileupload-button {
+  width: 15rem;
+  margin-bottom: 1rem;
+  border-radius: 3.125rem !important;
+  padding: 0.5rem !important;
+  box-shadow: -25px 12px 12px -9px rgb(0 0 0 / 25%);
+  margin-top: 2rem;
+}
+
+.fileupload-input {
+  width: 29rem;
+}
