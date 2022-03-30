@@ -23,22 +23,23 @@ const Myfile = () => {
     <div>
       <Navbar />
       <SideBar />
-      <h2 className="text-center">my file</h2>
-      {files &&
-        files.map((myfile) => (
-          <div className="myfile-table">
-            <table className="table table-bordered">
-              <thead>
+
+      <div className="myfile-table container">
+        <h2 className="text-center">my file</h2>
+        <table className="table table-bordered">
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>Owner Name</th>
+              <th>Details</th>
+              <th>share</th>
+            </tr>
+          </thead>
+          <tbody>
+            {files &&
+              files.map((myfile) => (
                 <tr>
-                  <th scope="col">id</th>
-                  <th scope="col">Owner Name</th>
-                  <th scope="col">Details</th>
-                  <th scope="col">share</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">{myfile._id}</th>
+                  <td>{myfile._id}</td>
                   <td>{myfile.ownerName}</td>
                   <td>{myfile.amount}</td>
                   <div className="myfile-buutton">
@@ -59,10 +60,10 @@ const Myfile = () => {
                     </td>
                   </div>
                 </tr>
-              </tbody>
-            </table>
-          </div>
-        ))}
+              ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

@@ -4,20 +4,21 @@ const router = express.Router();
 
 const fileUploadModel = require("../models/fileUploadModel");
 
-const storage = multer.diskStorage({
-  destination: (req, file, callback) => {
-    callback(null, "./frontend/public/uploads/");
-  },
-  filename: (req, file, callback) => {
-    callback(null, file.originalname);
-  },
-});
+// const storage = multer.diskStorage({
+//   destination: (req, file, callback) => {
+//     callback(null, "./frontend/public/uploads/");
+//   },
+//   filename: (req, file, callback) => {
+//     callback(null, file, originalname);
+//   },
+// });
 
-const upload = multer({ storage: storage });
+// const upload = multer({ storage: storage });
 
-router.post("/fileupload", upload.single("propimage"), async (req, res) => {
+router.post("/fileupload", async (req, res) => {
+  //upload.single("propimage"),
   const { ownerName, bivag, zilla, mouza, amount, map } = req.body;
-  const { propimage } = req.file.originalname;
+  // const { propimage } = req.file;
   const fileuploads = new fileUploadModel({
     ownerName,
     bivag,
@@ -25,7 +26,7 @@ router.post("/fileupload", upload.single("propimage"), async (req, res) => {
     mouza,
     amount,
     map,
-    propimage,
+    // propimage,
   });
   try {
     const fileuploadResult = await fileuploads.save();

@@ -20,28 +20,26 @@ const Fileupload = () => {
   };
 
   const fileuploads = async () => {
-    // const files = {
-    //   ownerName,
-    //   bivag,
-    //   zilla,
-    //   mouza,
-    //   amount,
-    //   map,
-    //   propimage,
-    // };
-    const formData = new FormData();
-    formData.append("ownerName", ownerName);
-    formData.append("bivag", bivag);
-    formData.append("zilla", zilla);
-    formData.append("mouza", mouza);
-    formData.append("amount", amount);
-    formData.append("map", map);
-    formData.append("propimage", propimage);
+    const files = {
+      ownerName,
+      bivag,
+      zilla,
+      mouza,
+      amount,
+      map,
+      propimage,
+    };
+    // const formData = new FormData();
+    // formData.append("ownerName", ownerName);
+    // formData.append("bivag", bivag);
+    // formData.append("zilla", zilla);
+    // formData.append("mouza", mouza);
+    // formData.append("amount", amount);
+    // formData.append("map", map);
+    // formData.append("propimage", propimage);
     try {
-      const fileuploadResult = await axios.post(
-        "/api/users/fileupload",
-        formData
-      ).data;
+      const fileuploadResult = await axios.post("/api/users/fileupload", files)
+        .data;
     } catch (error) {
       console.log(error);
     }
@@ -57,7 +55,7 @@ const Fileupload = () => {
         <h2 className="form-text">File Upload</h2>
         <form
           onSubmit={fileFormSubmit}
-          encType="multipart/form-data"
+          // encType="multipart/form-data"
           className="form-main"
           //   style={{ position: "absolute", left: "50%", top: "25%" }}
         >
