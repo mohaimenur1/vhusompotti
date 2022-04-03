@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+
 import Navbar from "../Dashboard/Navbar/Navbar";
 import SideBar from "../Dashboard/SideBar/SideBar";
 import "./Myfile.css";
@@ -38,7 +39,7 @@ const Myfile = () => {
           <tbody>
             {files &&
               files.map((myfile) => (
-                <tr>
+                <tr key={myfile._id}>
                   <td>{myfile._id}</td>
                   <td>{myfile.ownerName}</td>
                   <td>{myfile.amount}</td>

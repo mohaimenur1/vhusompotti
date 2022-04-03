@@ -13,5 +13,5 @@ th {
   position: relative;
   left: 10rem;
   top: 7rem;
-  z-index: -1;
+  /* z-index: -200; */
 }
