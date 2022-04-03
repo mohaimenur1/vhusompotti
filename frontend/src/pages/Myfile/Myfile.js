@@ -31,8 +31,8 @@ const Myfile = () => {
             <tr>
               <th>id</th>
               <th>Owner Name</th>
+              <th>Amount</th>
               <th>Details</th>
-              <th>share</th>
             </tr>
           </thead>
           <tbody>
