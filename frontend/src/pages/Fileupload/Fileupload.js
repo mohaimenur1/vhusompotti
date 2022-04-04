@@ -14,32 +14,38 @@ const Fileupload = () => {
   const [map, setMap] = useState("");
   const [propimage, setPropImage] = useState("");
 
+  const onChangeFile = (e) => {
+    setPropImage(e.target.files[0]);
+  };
+
   const fileFormSubmit = (e) => {
     e.preventDefault();
     console.log({ ownerName, bivag, zilla, mouza, amount, map, propimage });
   };
 
   const fileuploads = async () => {
-    const files = {
-      ownerName,
-      bivag,
-      zilla,
-      mouza,
-      amount,
-      map,
-      propimage,
-    };
-    // const formData = new FormData();
-    // formData.append("ownerName", ownerName);
-    // formData.append("bivag", bivag);
-    // formData.append("zilla", zilla);
-    // formData.append("mouza", mouza);
-    // formData.append("amount", amount);
-    // formData.append("map", map);
-    // formData.append("propimage", propimage);
+    // const files = {
+    //   ownerName,
+    //   bivag,
+    //   zilla,
+    //   mouza,
+    //   amount,
+    //   map,
+    //   propimage,
+    // };
+    const formData = new FormData();
+    formData.append("ownerName", ownerName);
+    formData.append("bivag", bivag);
+    formData.append("zilla", zilla);
+    formData.append("mouza", mouza);
+    formData.append("amount", amount);
+    formData.append("map", map);
+    formData.append("image", propimage);
     try {
-      const fileuploadResult = await axios.post("/api/users/fileupload", files)
-        .data;
+      const fileuploadResult = await axios.post(
+        "/api/users/fileupload",
+        formData
+      ).data;
     } catch (error) {
       console.log(error);
     }
@@ -55,7 +61,7 @@ const Fileupload = () => {
         <h2 className="form-text">File Upload</h2>
         <form
           onSubmit={fileFormSubmit}
-          // encType="multipart/form-data"
+          encType="multipart/form-data"
           className="form-main"
           //   style={{ position: "absolute", left: "50%", top: "25%" }}
         >
@@ -138,10 +144,7 @@ const Fileupload = () => {
                 type="file"
                 filename="image"
                 className=""
-                file={propimage}
-                onChange={(e) => {
-                  setPropImage(e.target.files[0]);
-                }}
+                onChange={onChangeFile}
               />
             </div>
           </div>

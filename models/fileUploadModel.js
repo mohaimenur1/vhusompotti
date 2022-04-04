@@ -27,8 +27,9 @@ const fileUploadSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-  propimage: {
+  image: {
     type: String,
+    required: true,
   },
 });
 

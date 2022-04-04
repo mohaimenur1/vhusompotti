@@ -9,6 +9,7 @@ const dbConfig = require("./db");
 //declare express middlewares
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+// app.use(express.json());
 
 // const landingPageRoute = require('./routes/landingPageRoute');
 const userRoute = require("./routes/userRoute");
