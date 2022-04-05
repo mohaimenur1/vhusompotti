@@ -47,4 +47,14 @@ router.get("/getallfile", async (req, res) => {
   }
 });
 
+router.get("/:fileid", async (req, res) => {
+  // console.log(req.body);
+  try {
+    const data = await fileUploadModel.findById(req.body.fileid);
+    return res.send(data);
+  } catch (error) {
+    return res.status(400).json({ message: error });
+  }
+});
+
 module.exports = router;

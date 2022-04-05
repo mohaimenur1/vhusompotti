@@ -19,6 +19,9 @@ const fileUploadRoute = require("./routes/fileUploadRoute");
 // app.use('/', landingPageRoute);
 app.use("/api/users/", userRoute);
 app.use("/api/users/", fileUploadRoute);
+// app.use("/api/users/", fileUploadRoute);
+
+app.use("/api/users/myfile/", fileUploadRoute);
 
 //import the db file for running our database or check the db is connected or not
 

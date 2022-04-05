@@ -50,7 +50,11 @@ const Myfile = () => {
                       </Link>
                     </td>
                     <td>
-                      <Link to="/myfile/:id" className="btn btn-success">
+                      <Link
+                        // files={files}
+                        to={`/${myfile._id}`}
+                        className="btn btn-success"
+                      >
                         View
                       </Link>
                     </td>
