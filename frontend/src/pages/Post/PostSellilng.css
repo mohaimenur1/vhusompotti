@@ -10,7 +10,7 @@
 .post-section {
   position: relative;
   left: 15rem;
-  top: 10rem;
+  top: 30rem;
   width: 50rem;
   height: 20rem;
   /* border: 1px solid black; */
@@ -21,6 +21,7 @@
 .post-contents {
   display: flex;
   padding: 4rem;
+  margin-top: 10rem;
   justify-content: center;
   align-items: center;
 }
@@ -61,4 +62,55 @@
 
 .side-menu {
   margin-top: 5.2rem;
+}
+
+.bdge {
+  height: 21px;
+  background-color: orange;
+  color: #fff;
+  font-size: 11px;
+  padding: 8px;
+  border-radius: 4px;
+  line-height: 3px;
+}
+
+.comments {
+  text-decoration: underline;
+  text-underline-position: under;
+  cursor: pointer;
+}
+
+.dot {
+  height: 7px;
+  width: 7px;
+  margin-top: 3px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.hit-voting:hover {
+  color: blue;
+}
+
+.hit-voting {
+  cursor: pointer;
+}
+
+.servicedrop {
+  transition-delay: 1s;
+}
+
+.action-collapse {
+  cursor: pointer;
+}
+
+.content {
+  margin-top: 12rem;
+  margin-left: 7rem;
+}
+
+.comment-image {
+  width: 70px;
+  height: 70px;
 }

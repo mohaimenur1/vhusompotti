@@ -22,6 +22,7 @@ const App = () => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/post" element={<PostSelling />} />
         <Route path="/fileupload" element={<Fileupload />} />
+
         <Route path="/myfile" element={<Myfile />} />
         <Route path="/:fileid" element={<SeparateFile />} />
         <Route path="*" element={<Error />} />
